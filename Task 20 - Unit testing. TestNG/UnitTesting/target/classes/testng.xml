@@ -1,0 +1,50 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestngTestingSuite" >
+    <parameter name="x" value="1"/>
+    <parameter name="y" value="2"/>
+    <parameter name="addResult" value="3"/>
+
+    <test name="runGroups">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="fast"/>
+                <exclude name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Class1">
+                <methods>
+                    <exclude name=""/>
+                </methods>
+            </class>
+            <class name="Class2"/>
+        </classes>
+    </test>
+
+    <test name="runTestUsingDataSets">
+        <classes>
+            <class name="Class1">
+                <methods>
+                    <include name="dataDrivenTestAdd"/>
+                    <include name="dataDrivenTestDeduct"/>
+                    <include name="dataDrivenTestDivide"/>
+                    <include name="dataDrivenTestMultiply"/>
+                    <include name="testAddUsingDataFromFile"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="DatasetTestViaTestngxml">
+        <classes>
+            <class name="Class1">
+                <methods>
+                    <include name="dataDrivenTestUsingXml"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
