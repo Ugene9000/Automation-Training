@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Task 40 - Selenium Webdriver">
+    <test name="Test">
+        <classes>
+            <class name="LoginPageTest">
+                <methods>
+                    <include name="testLoginNegative"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

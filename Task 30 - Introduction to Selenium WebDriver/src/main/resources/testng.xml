@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="RMSYS_TEST">
+
+    <test name="Test">
+        <classes>
+            <class name="LoginPageTest"/>
+            <class name="HomePageTest"/>
+            <class name="VacationPageTest"/>
+            <class name="CompanyTestPage"/>
+        </classes>
+    </test>
+
+
+
+</suite>
