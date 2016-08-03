@@ -17,7 +17,7 @@ public class Class1CssSelectors extends TestBase {
     private static final String VACATION_PAGE_TITLE = "RMSys - Vacation";
     private static final By ALL_LINKS_AND_INPUTS_HOME_PAGE = By.cssSelector("a,input");
     private static final By ALL_ELEMENTS_HOME_PAGE = By.cssSelector("*");
-    private static final By ALL_ELEMENTS_NEAR_USER_NAME = By.cssSelector("#info > div");
+    private static final By ALL_ELEMENTS_NEAR_USER_NAME = By.cssSelector("#info>a~div");
     private static final By OFFICE_051_LINK = By.cssSelector("#officeWidgetContent li:first-child");
     private static final By OFFICE_424_LINK = By.cssSelector("#officeWidgetContent li:last-child");
     private static final By OFFICE_118_LINK = By.cssSelector("#officeWidgetContent li:nth-child(4)");

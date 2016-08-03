@@ -1,6 +1,8 @@
 import base.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 /**
@@ -17,11 +19,11 @@ public class CompanyTestPage extends TestBase {
     public void findWebElementsByLocatorsCompanyPage() {
         WebElement companyTabLink = getDriver().findElement(COMPANY_TAB_LINK);
         companyTabLink.click();
+        companyTabLink.click();
+        new WebDriverWait(getDriver(), 10).until(ExpectedConditions.titleIs("RMSys - Company"));
         WebElement grabAllCompaniesCss = getDriver().findElement(ALL_COMPANIES_CONTAINERS_CSS);
         WebElement grabAllCompaniesXPath = getDriver().findElement(ALL_COMPANIES_CONTAINERS_XPATH);
         WebElement companiesContactTabCss = getDriver().findElement(COMPANIES_CONTACT_TAB_CSS);
         WebElement companiesContactTabXPath = getDriver().findElement(COMPANIES_CONTACT_TAB_XPATH);
     }
-
-
 }

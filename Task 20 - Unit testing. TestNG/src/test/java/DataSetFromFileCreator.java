@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.InputStreamReader;
 
 /**
  * Created by eugene_z on 7/14/16.
@@ -14,7 +15,7 @@ public class DataSetFromFileCreator {
     public static List<Object[]> retrieveDataFromFile() throws IOException {
 
 
-        BufferedReader reader = new BufferedReader(new FileReader("/Users/eugene_z/Automation/Automation-Training/Task 20 - Unit testing. TestNG/src/main/resources/TestData.txt"));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(DataSetFromFileCreator.class.getResourceAsStream("/TestData.txt")));
         String str;
 
         List<Object[]> list = new ArrayList<Object[]>();

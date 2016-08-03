@@ -15,7 +15,7 @@ public class Class2XPathSelectors extends TestBase {
     private static final String HOME_PAGE_TITLE = "RMSys - Home";
     private static final By ALL_LINKS_AND_INPUTS = By.xpath("//a | //input");
     private static final By ALL_ELEMENTS = By.xpath("//*");
-    private static final By ALL_ELEMENTS_NEAR_USER_NAME = By.xpath("//div[@id = \"info\"]/div");
+    private static final By ALL_ELEMENTS_NEAR_USER_NAME = By.xpath("//div[@id = \"info\"]/a/following-sibling::div");
     private static final By OFFICE_051_LINK = By.xpath("//div[@id = \"officeWidgetContent\"]//li[1]/a");
     private static final By OFFICE_424_LINK = By.xpath("//div[@id = \"officeWidgetContent\"]//li[last()]/a");
     private static final By OFFICE_118_LINK = By.xpath("//div[@id = \"officeWidgetContent\"]//li[4]/a");
