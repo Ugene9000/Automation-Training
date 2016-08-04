@@ -16,6 +16,7 @@ public class LoginPageTest extends TestBase {
     private static final By USERNAME_INPUT_XPATH = By.xpath("//input[@id=\"Username\"]");
     private static final By PASSWORD_INPUT_CSS = By.cssSelector("input[id=\"Password\"]");
     private static final By PASSWORD_INPUT_XPATH = By.xpath("//input[@id=\"Password\"]");
+    private static final By REMEMBER_ME_LABEL_CSS = By.cssSelector("div[class = \"editor-chbox\"]>span");
     private static final By REMEMBER_ME_LABEL_XPATH = By.xpath("//*[.=\"Remember me \"]");
     private static final By REMEMBER_ME_CHECKBOX_CSS = By.cssSelector("label[for=\"Remember\"]>span");
     private static final By REMEMBER_ME_CHECKBOX_XPATH = By.xpath("//label[@for=\"Remember\"]/span");
@@ -30,6 +31,7 @@ public class LoginPageTest extends TestBase {
         WebElement usernameInputXpath = getDriver().findElement(USERNAME_INPUT_XPATH);
         WebElement passwordInputCss = getDriver().findElement(PASSWORD_INPUT_CSS);
         WebElement passwordInputXpath = getDriver().findElement(PASSWORD_INPUT_XPATH);
+        WebElement rememberMeLabelCss = getDriver().findElement(REMEMBER_ME_LABEL_CSS);
         WebElement rememberMeLabelXPath = getDriver().findElement(REMEMBER_ME_LABEL_XPATH);
         WebElement rememberMeCheckboxCss = getDriver().findElement(REMEMBER_ME_CHECKBOX_CSS);
         WebElement rememberMeCheckboxXpath = getDriver().findElement(REMEMBER_ME_CHECKBOX_XPATH);

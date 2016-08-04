@@ -12,12 +12,10 @@ public class VacationPageTest extends TestBase {
 
     private static final By VACATION_TAB_LINK = By.cssSelector("a[id=\"vacationMenu\"]");
     private static final By INFO_SPAN_NOTIFICATION_TO_CSS = By.cssSelector("div[id=\"thirdContainer\"]>span[class=\"question\"]");
-    private static final By INFO_SPAN_NOTIFICATION_TO_XPATH = By.xpath("//div[@id = \"thirdContainer\"]/*[@class = \"question\"]");
+    private static final By INFO_SPAN_NOTIFICATION_TO_XPATH = By.xpath("//div[@id = \"thirdContainer\"]/span[@class = \"question\"]");
     private static final By INFO_SPAN_NOTIFICATION_CC_CSS = By.cssSelector("div[class=\"altenates-approvers-container\"]>div>span[class=\"question\"]");
     private static final By INFO_SPAN_NOTIFICATION_CC_XPATH = By.xpath("//div[@class=\"altenates-approvers-container\"]/div/span[@class=\"question\"]");
-    /*private static final By SPAN_NOTIFICATION_TO_POPUP_XPATH = By.xpath("//p[.=\"List of persons for notifications is organized automatically by Vacation Manager depending on the projects you are involved in. After your Vacation is approved, the system will send meeting about your vacation to persons from Notifications List.\"]");
-    private static final By SPAN_NOTIFICATION_CC_POPUP_XPATH = By.xpath("//p[.=\"Add people you want to send notification to CC by entering the first and last name into the field.The notification will be sent after the request has been approved.\"]");
-*/
+
     @Test()
     public void findWebElementsByLocatorsVacationPage() throws InterruptedException {
         WebElement vacationTabLink = getDriver().findElement(VACATION_TAB_LINK);
@@ -26,10 +24,5 @@ public class VacationPageTest extends TestBase {
         WebElement infoSpanNotificationToXPath = getDriver().findElement(INFO_SPAN_NOTIFICATION_TO_XPATH);
         WebElement infoSpanNotificationCCCss = getDriver().findElement(INFO_SPAN_NOTIFICATION_CC_CSS);
         WebElement infoSpanNotificationCCXPath = getDriver().findElement(INFO_SPAN_NOTIFICATION_CC_XPATH);
-
-        //infoSpanNotificationCCCss.click();
-       // WebElement SpanNotificationCCPopupXPath = getDriver().findElement(SPAN_NOTIFICATION_CC_POPUP_XPATH);
-       // infoSpanNotificationToCss.click();
-      //  WebElement SpanNotificationToPopupXPath = getDriver().findElement(SPAN_NOTIFICATION_TO_POPUP_XPATH);
     }
 }
