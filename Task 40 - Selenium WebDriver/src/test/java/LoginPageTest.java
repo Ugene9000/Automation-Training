@@ -28,8 +28,8 @@ public class LoginPageTest extends TestBase {
     private static final String SIGN_IN_PAGE_TITLE = "RMSys - Sign In";
     private static final String HOME_PAGE_TITLE = "RMSys - Home";
     private static final By SEARCH_BY_OFFICE_INPUT = By.id("input-search");
-    private static final By USERNAME_VALIDATION = By.id("user-box-validation");
-    private static final By PASSWORD_VALIDATION = By.id("password-box-validation");
+    private static final String USERNAME_VALIDATION_MESSAGE_TEXT = ">Username is required<";
+    private static final String PASSWORD_VALIDATION_MESSAGE_TEXT = ">Password is required<";
 
     @Test
     public void login() throws InterruptedException {
@@ -93,8 +93,8 @@ public class LoginPageTest extends TestBase {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Assert.assertTrue(getDriver().findElement(USERNAME_VALIDATION).isDisplayed() == Boolean.valueOf(usernameValidationIsDisplayed));
-        Assert.assertTrue(getDriver().findElement(PASSWORD_VALIDATION).isDisplayed() == Boolean.valueOf(passwordValidationIsDisplayed));
+        Assert.assertTrue((getDriver().getPageSource().contains(USERNAME_VALIDATION_MESSAGE_TEXT)) == (Boolean.valueOf(usernameValidationIsDisplayed)));
+        Assert.assertTrue((getDriver().getPageSource().contains(PASSWORD_VALIDATION_MESSAGE_TEXT)) == (Boolean.valueOf(passwordValidationIsDisplayed)));
         Assert.assertTrue(getDriver().getTitle().equals(pageTitle));
     }
 
