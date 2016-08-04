@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginPageTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginPageTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/LoginPageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+            <state relative-caret-position="32">
+              <caret line="21" column="107" selection-start-line="21" selection-start-column="107" selection-end-line="21" selection-end-column="107" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VacationPageTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VacationPageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/VacationPageTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -89,21 +89,10 @@
       <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/base/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="-88">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
               <folding>
-                <element signature="e#568#569#0" expanded="false" />
-                <element signature="e#601#602#0" expanded="false" />
-                <element signature="e#643#644#0" expanded="false" />
-                <element signature="e#674#675#0" expanded="false" />
-                <element signature="e#716#717#0" expanded="false" />
-                <element signature="e#747#748#0" expanded="false" />
-                <element signature="e#783#784#0" expanded="false" />
-                <element signature="e#812#813#0" expanded="false" />
-                <element signature="e#853#854#0" expanded="false" />
-                <element signature="e#880#881#0" expanded="false" />
-                <element signature="e#1156#1157#0" expanded="false" />
-                <element signature="e#1185#1186#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,8 +142,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/testng.xml" />
         <option value="$PROJECT_DIR$/src/main/java/base/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/CompanyTestPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/LoginPageTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/VacationPageTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/LoginPageTest.java" />
       </list>
     </option>
   </component>
@@ -320,7 +309,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="TestNG./Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml">
+  <component name="RunManager" selected="TestNG.LoginPageTest.findWebElementsByLocatorsLoginPage">
     <configuration default="false" name="LoginPageTest.findWebElementsByLocatorsLoginPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Task 30 - Introduction to Selenium WebDriver" />
@@ -932,10 +921,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG./Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.VacationPageTest" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.HomePageTest.findWebElementsByLocatorsHomePage" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.LoginPageTest.findWebElementsByLocatorsLoginPage" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.LoginPageTest.findWebElementsByLocatorsLoginPage" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG./Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.VacationPageTest" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.HomePageTest.findWebElementsByLocatorsHomePage" />
         <item index="4" class="java.lang.String" itemvalue="TestNG.LoginPageTest" />
       </list>
     </recent_temporary>
@@ -963,44 +952,44 @@
       <workItem from="1469447528123" duration="1355000" />
       <workItem from="1470214109950" duration="5974000" />
       <workItem from="1470223633309" duration="1801000" />
-      <workItem from="1470299833617" duration="1622000" />
+      <workItem from="1470299833617" duration="4482000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_Users_eugene_z_Automation_Automation-Training_Task_30_-_Introduction_to_Selenium_WebDriver_src_main_resources_testng_xml - 2016.08.03 at 14h 26m 46s.xml">
-      <configuration name="/Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="LoginPageTest_findWebElementsByLocatorsLoginPage - 2016.08.04 at 14h 37m 57s.xml">
+      <configuration name="LoginPageTest.findWebElementsByLocatorsLoginPage" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_eugene_z_Automation_Automation-Training_Task_30_-_Introduction_to_Selenium_WebDriver_src_main_resources_testng_xml - 2016.08.03 at 14h 27m 29s.xml">
-      <configuration name="/Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="LoginPageTest_findWebElementsByLocatorsLoginPage - 2016.08.04 at 14h 38m 34s.xml">
+      <configuration name="LoginPageTest.findWebElementsByLocatorsLoginPage" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_eugene_z_Automation_Automation-Training_Task_30_-_Introduction_to_Selenium_WebDriver_src_main_resources_testng_xml - 2016.08.03 at 14h 34m 30s.xml">
-      <configuration name="/Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="LoginPageTest_findWebElementsByLocatorsLoginPage - 2016.08.04 at 14h 39m 44s.xml">
+      <configuration name="LoginPageTest.findWebElementsByLocatorsLoginPage" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_eugene_z_Automation_Automation-Training_Task_30_-_Introduction_to_Selenium_WebDriver_src_main_resources_testng_xml - 2016.08.03 at 14h 35m 01s.xml">
-      <configuration name="/Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="LoginPageTest_findWebElementsByLocatorsLoginPage - 2016.08.04 at 14h 53m 51s.xml">
+      <configuration name="LoginPageTest.findWebElementsByLocatorsLoginPage" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_eugene_z_Automation_Automation-Training_Task_30_-_Introduction_to_Selenium_WebDriver_src_main_resources_testng_xml - 2016.08.03 at 14h 36m 00s.xml">
-      <configuration name="/Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="LoginPageTest_findWebElementsByLocatorsLoginPage - 2016.08.04 at 14h 54m 25s.xml">
+      <configuration name="LoginPageTest.findWebElementsByLocatorsLoginPage" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_eugene_z_Automation_Automation-Training_Task_30_-_Introduction_to_Selenium_WebDriver_src_main_resources_testng_xml - 2016.08.03 at 14h 36m 34s.xml">
-      <configuration name="/Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="LoginPageTest_findWebElementsByLocatorsLoginPage - 2016.08.04 at 14h 58m 26s.xml">
+      <configuration name="LoginPageTest.findWebElementsByLocatorsLoginPage" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_eugene_z_Automation_Automation-Training_Task_30_-_Introduction_to_Selenium_WebDriver_src_main_resources_testng_xml - 2016.08.03 at 14h 38m 14s.xml">
-      <configuration name="/Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="LoginPageTest_findWebElementsByLocatorsLoginPage - 2016.08.04 at 16h 01m 17s.xml">
+      <configuration name="LoginPageTest.findWebElementsByLocatorsLoginPage" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_eugene_z_Automation_Automation-Training_Task_30_-_Introduction_to_Selenium_WebDriver_src_main_resources_testng_xml - 2016.08.03 at 14h 38m 44s.xml">
-      <configuration name="/Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="LoginPageTest_findWebElementsByLocatorsLoginPage - 2016.08.04 at 16h 02m 43s.xml">
+      <configuration name="LoginPageTest.findWebElementsByLocatorsLoginPage" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_eugene_z_Automation_Automation-Training_Task_30_-_Introduction_to_Selenium_WebDriver_src_main_resources_testng_xml - 2016.08.03 at 15h 46m 00s.xml">
-      <configuration name="/Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="LoginPageTest_findWebElementsByLocatorsLoginPage - 2016.08.04 at 16h 03m 36s.xml">
+      <configuration name="LoginPageTest.findWebElementsByLocatorsLoginPage" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_eugene_z_Automation_Automation-Training_Task_30_-_Introduction_to_Selenium_WebDriver_src_main_resources_testng_xml - 2016.08.04 at 14h 24m 07s.xml">
-      <configuration name="/Users/eugene_z/Automation/Automation-Training/Task 30 - Introduction to Selenium WebDriver/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="LoginPageTest_findWebElementsByLocatorsLoginPage - 2016.08.04 at 16h 07m 54s.xml">
+      <configuration name="LoginPageTest.findWebElementsByLocatorsLoginPage" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65410000" />
+    <option name="totallyTimeSpent" value="68270000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="5" y="23" width="1435" height="829" extended-state="6" />
@@ -1046,7 +1035,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="26" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1092,18 +1081,7 @@
         <state relative-caret-position="570">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
-            <element signature="e#568#569#0" expanded="false" />
-            <element signature="e#601#602#0" expanded="false" />
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#674#675#0" expanded="false" />
-            <element signature="e#716#717#0" expanded="false" />
-            <element signature="e#747#748#0" expanded="false" />
-            <element signature="e#783#784#0" expanded="false" />
-            <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#853#854#0" expanded="false" />
-            <element signature="e#880#881#0" expanded="false" />
-            <element signature="e#1156#1157#0" expanded="false" />
-            <element signature="e#1185#1186#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1179,18 +1157,7 @@
         <state relative-caret-position="630">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
-            <element signature="e#568#569#0" expanded="false" />
-            <element signature="e#601#602#0" expanded="false" />
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#674#675#0" expanded="false" />
-            <element signature="e#716#717#0" expanded="false" />
-            <element signature="e#747#748#0" expanded="false" />
-            <element signature="e#783#784#0" expanded="false" />
-            <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#853#854#0" expanded="false" />
-            <element signature="e#880#881#0" expanded="false" />
-            <element signature="e#1156#1157#0" expanded="false" />
-            <element signature="e#1185#1186#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1266,18 +1233,7 @@
         <state relative-caret-position="570">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
-            <element signature="e#568#569#0" expanded="false" />
-            <element signature="e#601#602#0" expanded="false" />
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#674#675#0" expanded="false" />
-            <element signature="e#716#717#0" expanded="false" />
-            <element signature="e#747#748#0" expanded="false" />
-            <element signature="e#783#784#0" expanded="false" />
-            <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#853#854#0" expanded="false" />
-            <element signature="e#880#881#0" expanded="false" />
-            <element signature="e#1156#1157#0" expanded="false" />
-            <element signature="e#1185#1186#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1353,18 +1309,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#568#569#0" expanded="false" />
-            <element signature="e#601#602#0" expanded="false" />
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#674#675#0" expanded="false" />
-            <element signature="e#716#717#0" expanded="false" />
-            <element signature="e#747#748#0" expanded="false" />
-            <element signature="e#783#784#0" expanded="false" />
-            <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#853#854#0" expanded="false" />
-            <element signature="e#880#881#0" expanded="false" />
-            <element signature="e#1156#1157#0" expanded="false" />
-            <element signature="e#1185#1186#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1457,39 +1402,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/TestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="e#568#569#0" expanded="false" />
-            <element signature="e#601#602#0" expanded="false" />
-            <element signature="e#643#644#0" expanded="false" />
-            <element signature="e#674#675#0" expanded="false" />
-            <element signature="e#716#717#0" expanded="false" />
-            <element signature="e#747#748#0" expanded="false" />
-            <element signature="e#783#784#0" expanded="false" />
-            <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#853#854#0" expanded="false" />
-            <element signature="e#880#881#0" expanded="false" />
-            <element signature="e#1156#1157#0" expanded="false" />
-            <element signature="e#1185#1186#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CompanyTestPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1502,21 +1418,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/LoginPageTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/VacationPageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        <state relative-caret-position="225">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/VacationPageTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/CompanyTestPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        <state relative-caret-position="240">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LoginPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="21" column="107" selection-start-line="21" selection-start-column="107" selection-end-line="21" selection-end-column="107" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -18,8 +18,8 @@ public class LoginPageTest extends TestBase {
     private static final By PASSWORD_INPUT_XPATH = By.xpath("//input[@id=\"Password\"]");
     private static final By REMEMBER_ME_LABEL_CSS = By.cssSelector("div[class = \"editor-chbox\"]>span");
     private static final By REMEMBER_ME_LABEL_XPATH = By.xpath("//*[.=\"Remember me \"]");
-    private static final By REMEMBER_ME_CHECKBOX_CSS = By.cssSelector("label[for=\"Remember\"]>span");
-    private static final By REMEMBER_ME_CHECKBOX_XPATH = By.xpath("//label[@for=\"Remember\"]/span");
+    private static final By REMEMBER_ME_CHECKBOX_CSS = By.cssSelector("div[class = \"remember-chBox\"]");
+    private static final By REMEMBER_ME_CHECKBOX_XPATH = By.xpath("//div[@class=\"remember-chBox\"]//label/span");
     private static final By LOGIN_BUTTON_CSS = By.cssSelector("button[id = \"SubmitButton\"]");
     private static final By LOGIN_BUTTON_XPATH = By.xpath("//button[@id = \"SubmitButton\"]");
     private static final By MY_PROFILE_LINK = By.xpath("//*[@id=\"username-settings\"]/a");
@@ -34,10 +34,35 @@ public class LoginPageTest extends TestBase {
         WebElement rememberMeLabelCss = getDriver().findElement(REMEMBER_ME_LABEL_CSS);
         WebElement rememberMeLabelXPath = getDriver().findElement(REMEMBER_ME_LABEL_XPATH);
         WebElement rememberMeCheckboxCss = getDriver().findElement(REMEMBER_ME_CHECKBOX_CSS);
+        WebElement rememberMeCheckboxXPath = getDriver().findElement(REMEMBER_ME_CHECKBOX_XPATH);
+        Assert.assertTrue(rememberMeCheckboxCss.isEnabled());
+        rememberMeCheckboxCss.click();
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        rememberMeCheckboxXPath.click();
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        rememberMeLabelCss.click();
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        rememberMeLabelXPath.click();
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         WebElement rememberMeCheckboxXpath = getDriver().findElement(REMEMBER_ME_CHECKBOX_XPATH);
         WebElement loginButtonCss = getDriver().findElement(LOGIN_BUTTON_CSS);
         WebElement loginButtonXPath = getDriver().findElement(LOGIN_BUTTON_XPATH);
-        Assert.assertTrue(rememberMeCheckboxCss.isDisplayed());
     }
 
     @Test
