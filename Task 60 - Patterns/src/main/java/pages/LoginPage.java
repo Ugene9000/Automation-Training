@@ -1,7 +1,6 @@
 package pages;
 
 import base.PageBase;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -41,6 +41,16 @@ public class LoginPage extends PageBase {
     @FindBy(xpath = "//span[.=\"Remember me \"]")
     private WebElement rememberMeLabelText;
 
+    @FindBy(css = "div.validation-summary-errors li")
+    private WebElement invalidCredentialsError;
+
+    @FindBy(id = "user-box-validation")
+    private WebElement usernameValidationError;
+
+    @FindBy(id = "password-box-validation")
+    private WebElement passwordValidationError;
+
+
     public WebElement getLogoContainer() {
         return logoContainer;
     }
@@ -69,8 +79,31 @@ public class LoginPage extends PageBase {
         return rememberMeLabelText;
     }
 
-    public static String getPageUrl() {
+    public String getPageUrl() {
         return PAGE_URL;
+    }
+
+    public WebElement getInvalidCredentialsError() {
+        return invalidCredentialsError;
+    }
+
+    public WebElement getUsernameValidationError() {
+        return usernameValidationError;
+    }
+
+    public WebElement getPasswordValidationError() {
+        return passwordValidationError;
+    }
+
+    public List<WebElement> getListOfElements() {
+        return Arrays.asList(
+                logoContainer,
+                usernameInputField,
+                passwordInputField,
+                signInButton,
+                rememberMeCheckBox,
+                rememberMeLabelText
+        );
     }
 
     public LoginPage(WebDriver driver) {
@@ -78,7 +111,7 @@ public class LoginPage extends PageBase {
         PageFactory.initElements(driver, this);
     }
 
-    public static String getPageTitle() {
+    public String getPageTitle() {
         return PAGE_TITLE;
     }
 
@@ -87,14 +120,11 @@ public class LoginPage extends PageBase {
         passwordInputField.sendKeys(password);
         new WebDriverWait(getDriver(), 5).until(ExpectedConditions.elementToBeClickable(signInButton));
         signInButton.click();
-        return new HomePage();
+        return new HomePage(getDriver());
     }
 
     public void loadPage() {
         getDriver().get(getPageUrl());
     }
 
-    protected void checkElements() {
-        getDriver().findElements()
-    }
 }
