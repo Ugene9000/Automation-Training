@@ -3,6 +3,10 @@
     <test name="Test">
         <classes>
             <class name="LoginPageTest"/>
+            <class name="HomePageTest"/>
+            <class name="OfficePageTest"/>
+            <class name="VacationPageTest"/>
+            <class name="VacationPageTest"/>
         </classes>
     </test>
 </suite>

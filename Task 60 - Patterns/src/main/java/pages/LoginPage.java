@@ -1,6 +1,7 @@
 package pages;
 
 import base.PageBase;
+import com.gargoylesoftware.htmlunit.WebClient;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -50,7 +51,6 @@ public class LoginPage extends PageBase {
     @FindBy(id = "password-box-validation")
     private WebElement passwordValidationError;
 
-
     public WebElement getLogoContainer() {
         return logoContainer;
     }
@@ -83,6 +83,10 @@ public class LoginPage extends PageBase {
         return PAGE_URL;
     }
 
+    public String getPageTitle() {
+        return PAGE_TITLE;
+    }
+
     public WebElement getInvalidCredentialsError() {
         return invalidCredentialsError;
     }
@@ -111,9 +115,7 @@ public class LoginPage extends PageBase {
         PageFactory.initElements(driver, this);
     }
 
-    public String getPageTitle() {
-        return PAGE_TITLE;
-    }
+
 
     public HomePage login(String username, String password) {
         usernameInputField.sendKeys(username);

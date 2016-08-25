@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="task 70 Headless Testing">
+    <test name="PagesTest - task 70">
+        <classes>
+            <class name="PagesTest"/>
+        </classes>
+    </test>
+</suite>

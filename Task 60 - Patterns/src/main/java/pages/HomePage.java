@@ -2,6 +2,7 @@ package pages;
 
 import base.PageBase;
 import base.TestBase;
+import com.gargoylesoftware.htmlunit.WebClient;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

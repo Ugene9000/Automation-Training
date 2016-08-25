@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+    <title>
+      RMSys - Sign In
+    </title>
+    <script src="/Scripts/RMSys/RedirectRouting.js">
+    </script>
+    <link href="/Content/css/jquery-custom-theme/jquery-ui-1.8.21.custom.css" rel="stylesheet"/>
+    <link href="/Content/css/rmsys/Master.css" rel="stylesheet"/>
+    <link href="/Content/css/jquery-custom-theme/ui.datepicker.css" rel="stylesheet"/>
+    <link href="/Content/css/rmsys/Login.css" rel="stylesheet"/>
+    <script src="/Scripts/jquery-1.9.1.js">
+    </script>
+    <script src="/Scripts/jquery-ui.js">
+    </script>
+    <script src="/Scripts/migrateScript.js">
+    </script>
+    <script src="/Scripts/jquery.textshadow.js">
+    </script>
+    <script src="/Scripts/RMSys/CheckBrowser.js">
+    </script>
+    <script src="/Scripts/jquery.unobtrusive-ajax.js">
+    </script>
+    <script src="/Scripts/jquery.validate.js">
+    </script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js">
+    </script>
+    <script src="/Scripts/RMSys/AutentificationError.js">
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+
+            setupRedirectToMobile('https://192.168.100.26:11119');
+        
+//]]>
+    </script>
+  </head>
+  <body>
+    <div id="main_div" class="main">
+      <script src="/Scripts/RMSys/SignIn.js">
+      </script>
+      <div class="login-form-container">
+        <form action="/?enctype=multipart%2Fform-data&amp;id=SignInForm" method="post">
+          <div class="form-container">
+            <div class="logo-container">
+            </div>
+            <div class="authentication-container">
+              <div>
+                <div id="user-box-validation" class="sign-in-validation validation-box">
+                  <span class="field-validation-valid" data-valmsg-for="Username" data-valmsg-replace="true">
+                  </span>
+                </div>
+                <div id="user-box" class="editor-field">
+                  <input data-val="true" data-val-regex="Invalid Username" data-val-regex-pattern="^[A-Za-z0-9\._\-]{1,}$" data-val-required="Username is required" id="Username" name="Username" placeholder="Username" type="text" value=""/>
+                  <select id="Domain" name="Domain">
+                    <option selected="selected">
+                      BY-MINSK
+                    </option>
+                    <option>
+                      US-MPLS
+                    </option>
+                  </select>
+                  <div id="user-domain">
+                    <ul class="domains">
+                      <li class="current-domain">
+                        <span name="Domains" id="Domains">
+                          BY-MINSK
+                        </span>
+                      </li>
+                      <li class="last-domain">
+                        <span name="Domains" id="Domains">
+                          US-MPLS
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div id="password-box-validation" class="sign-in-validation validation-box">
+                  <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true">
+                  </span>
+                </div>
+                <div id="password-box" class="editor-field">
+                  <input data-val="true" data-val-required="Password is required" id="Password" name="Password" placeholder="Password" type="password" value=""/>
+                </div>
+              </div>
+              <div class="editor-chbox">
+                <div class="remember-chBox">
+                  <input class="custom-chBox" data-val="true" data-val-required="The Remember field is required." id="Remember" name="Remember" type="checkbox" value="true"/>
+                  <input name="Remember" type="hidden" value="false"/>
+                  <label for="Remember">
+                    <span>
+                    </span>
+                  </label>
+                </div>
+                <span>
+                  Remember me 
+                </span>
+              </div>
+              <div class="editor-button">
+                <button id="SubmitButton" class="submit-button" type="submit">
+                  <span class="toolbar-button-text">
+                    Log In
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <input id="Hash" name="Hash" type="hidden" value=""/>
+        </form>
+      </div>
+      <script type="text/javascript">
+//<![CDATA[
+
+    $(function () {
+        if ('' == '') {
+            $('#Hash').val(window.location.hash);
+        }
+
+        $.validator.unobtrusive.parse("#SignInForm");
+
+        AutentificationValidation.ClonePassword("", "");
+        AutentificationValidation.HideValidation('True');
+        AutentificationValidation.BindValidation("#SubmitButton", ["#user-box", "#password-box"]);
+        AutentificationValidation.SetValidMsgPlaceholder();
+        bindEnterEvent();
+        bindSignInFormStyleForChrome();
+        bindPlaceholdersForIE();
+
+        $('.domains li').first().addClass('current-domain');
+        $('.domains li').last().addClass('last-domain');
+
+        initDomainValue();
+        bindDomainClickEvent();
+        bindDomainOutsideClickEvent();
+        bindRememberChboxClickEvent();
+    });
+
+//]]>
+      </script>
+      <div class="push">
+      </div>
+    </div>
+  </body>
+</html>
