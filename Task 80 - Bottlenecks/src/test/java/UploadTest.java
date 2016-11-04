@@ -1,39 +1,34 @@
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.os.WindowsUtils;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import pages.HerokuappPage;
+import pages.HerokuappPageDownload;
+import pages.HerokuappPageUpload;
 
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
 
-
-
-public class UploadTest implements KeyListener{
-
-    public void keyTyped(KeyEvent e) {
-
-    }
-
-    public void keyPressed(KeyEvent e) {
-
-    }
-
-    public void keyReleased(KeyEvent e) {
-
-    }
+public class UploadTest {
 
     @Test
     public void testUpload() throws InterruptedException {
         WebDriver driver = new FirefoxDriver();
-        HerokuappPage page = new HerokuappPage(driver);
+        HerokuappPageUpload page = new HerokuappPageUpload(driver);
         page.loadPage(driver);
         new WebDriverWait(driver, 5).until(ExpectedConditions.titleIs(page.getPageTitle()));
+        this.getClass().getClassLoader().getResource("/FileToUpload.jpg");
         File uploadFile = new File("./src/main/resources/FileToUpload.jpg");
         page.getBrowseButton().sendKeys(uploadFile.getAbsolutePath());
         page.getUploadButton().click();
@@ -43,48 +38,25 @@ public class UploadTest implements KeyListener{
     }
 
     @Test
-    public void testUploadWithLibrary() throws InterruptedException, AWTException {
+    public void testUploadWithRobotLibrary() throws InterruptedException, AWTException {
         WebDriver driver = new FirefoxDriver();
-        HerokuappPage page = new HerokuappPage(driver);
+        HerokuappPageUpload page = new HerokuappPageUpload(driver);
+        Thread.sleep(5000);
         page.loadPage(driver);
         new WebDriverWait(driver, 5).until(ExpectedConditions.titleIs(page.getPageTitle()));
         page.getBrowseButton().click();
         Thread.sleep(2000);
 
-        File uploadFile = new File("/Users/eugene_z/Automation/Automation-Training/Task 80 - Bottlenecks/src/main/resources/FileToUpload.jpg");
+        File uploadFile = new File("./src/main/resources/FileToUpload.jpg");
 
         StringSelection ss = new StringSelection(uploadFile.getAbsolutePath());
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 
         Robot robot = new Robot();
 
-        robot.keyPress(KeyEvent.VK_TAB);
-        robot.keyRelease(KeyEvent.VK_TAB);
-        robot.keyPress(KeyEvent.VK_TAB);
-        robot.keyRelease(KeyEvent.VK_TAB);
-        robot.keyPress(KeyEvent.VK_TAB);
-        robot.keyRelease(KeyEvent.VK_TAB);
-        robot.keyPress(KeyEvent.VK_TAB);
-        robot.keyRelease(KeyEvent.VK_TAB);
-        robot.keyPress(KeyEvent.VK_TAB);
-        robot.keyRelease(KeyEvent.VK_TAB);
-        robot.keyPress(KeyEvent.VK_M);
-        robot.keyRelease(KeyEvent.VK_M);
-        robot.keyPress(KeyEvent.VK_META);
-        Thread.sleep(500);
-        robot.keyPress(KeyEvent.VK_SHIFT);
-        Thread.sleep(500);
-        robot.keyPress(KeyEvent.VK_G);
-        Thread.sleep(500);
-        robot.keyRelease(KeyEvent.VK_META);
-        Thread.sleep(500);
-        robot.keyRelease(KeyEvent.VK_SHIFT);
-        Thread.sleep(500);
-        robot.keyRelease(KeyEvent.VK_G);
-        Thread.sleep(500);
-        robot.keyPress(KeyEvent.VK_META);
+        robot.keyPress(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_V);
-        robot.keyRelease(KeyEvent.VK_META);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
         robot.keyRelease(KeyEvent.VK_V);
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
@@ -95,40 +67,63 @@ public class UploadTest implements KeyListener{
         new WebDriverWait(driver, 5).until(ExpectedConditions.textToBePresentInElement(page.getNameOfUploadedFile(), uploadFile.getName()));
         Thread.sleep(3000);
         driver.quit();
-        Thread.sleep(4000);
+    }
+
+        @Test
+            public void testDownloadFileChrome() throws InterruptedException {
+          //  System.setProperty("webdriver.chrome.driver","D:\\Automation\\Automation-Training\\Task 80 - Bottlenecks\\src\\main\\resources\\Drivers\\chromedriver.exe");
+
+            Map<String,Object> prefs = new HashMap<String, Object>();
+            prefs.put("download.default_directory", "D:\\Automation\\Automation-Training\\Task 80 - Bottlenecks\\src\\main\\resources\\DownloadedFiles\\Chrome");
+            ChromeOptions options = new ChromeOptions();
+            options.setExperimentalOption("prefs", prefs);
+            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+            capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+
+            WebDriver driver = new ChromeDriver(capabilities);
+            HerokuappPageDownload page = new HerokuappPageDownload(driver);
+            page.loadPage(driver);
+            new WebDriverWait(driver, 5).until(ExpectedConditions.titleIs(page.getPAGE_TITLE()));
+
+            page.getTxtFileDownloadLink().click();
+
+        }
+
+
+    @Test
+    public void testDownloadFileIE() throws InterruptedException {
+        WindowsUtils.writeStringRegistryValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Download Directory", "D:\\Automation\\Automation-Training\\Task 80 - Bottlenecks\\src\\main\\resources\\DownloadedFiles\\IE");
+        WindowsUtils.writeStringRegistryValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\Default Download Directory", "D:\\Automation\\Automation-Training\\Task 80 - Bottlenecks\\src\\main\\resources\\DownloadedFiles\\IE");
+
+        System.setProperty("webdriver.ie.driver", "C:\\Program Files\\IEDriver\\IEDriverServer.exe");
+
+        WebDriver driver = new InternetExplorerDriver();
+        HerokuappPageDownload page = new HerokuappPageDownload(driver);
+
+        page.loadPage(driver);
+        new WebDriverWait(driver, 5).until(ExpectedConditions.titleIs(page.getPAGE_TITLE()));
+        page.getTxtFileDownloadLink().click();
+
+        Thread.sleep(5000);
         driver.quit();
     }
 
-/*    @Test
-    public void tutByTest() throws AWTException, InterruptedException {
-        WebDriver driver = new FirefoxDriver();
-        driver.get("http://tut.by");
-        TutByPage page = new TutByPage(driver);
-        new WebDriverWait(driver, 10).until(ExpectedConditions.titleIs("Белорусский портал TUT.BY"));
+    @Test
+    public void testDownloadFileFirefox() throws InterruptedException {
 
-        StringSelection ss = new StringSelection("ololo");
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+        FirefoxProfile profile = new FirefoxProfile();
 
-        JTextField component = new JTextField();
-        component.addKeyListener(new MyKeyListener());
+        profile.setPreference("browser.download.folderList",2);
+        profile.setPreference("browser.download.dir", "..\\src\\main\\resources\\DownloadedFiles\\Firefox"); //.src/main/resources/DownloadedFiles/Firefox
+        profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream");
 
-        page.getSearch().click();
+        WebDriver driver = new FirefoxDriver(profile);
 
+        HerokuappPageDownload page = new HerokuappPageDownload(driver);
 
-        Thread.sleep(2000);
+        page.loadPage(driver);
+        new WebDriverWait(driver, 5).until(ExpectedConditions.titleIs(page.getPAGE_TITLE()));
+        page.getTxtFileDownloadLink().click();
+    }
 
-        MyKeyListener listener = new MyKeyListener();
-        Robot robot = new Robot();
-
-        robot.keyPress(KeyEvent.VK_META);
-        listener.setKeyCode(KeyEvent.VK_META);
-        listener.keyPressed(KeyEvent e);
-        robot.keyPress(KeyEvent.VK_V);
-        robot.keyRelease(KeyEvent.VK_META);
-        robot.keyRelease(KeyEvent.VK_V);
-
-        Thread.sleep(2000);
-
-        driver.quit();
-    }*/
 }
